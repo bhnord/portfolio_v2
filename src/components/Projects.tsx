@@ -1,5 +1,6 @@
 import Project from "./Project";
 import img from "../assets/face.jpg";
+
 export default function Projects() {
   const description1 =
     "I worked in a group of three and traveled to Hong Kong to provide recommendations as to whether or not STC Hong Kong could improve their current certification processes by using blockchain.";
@@ -27,17 +28,15 @@ export default function Projects() {
   //TODO: add scrolling animations
   //TODO: add more projects + descriptions
   //TODO: add link spots
+  //
   return (
     <>
+      <h2 className="text-6xl mb-[100px] ">Projects</h2>
       <div className="w-screen">
-        <h2 className="text-6xl mb-[100px]">Projects</h2>
-        {projects.map(({ num, title, description, img }) => (
-          <Project
-            img={img}
-            num={num}
-            title={title}
-            description={description}
-          />
+        <h3 className="text-9xl sticky top-8 ml-8">1</h3>
+
+        {projects.map(({ title, description, img }) => (
+          <Project img={img} title={title} description={description} />
         ))}
       </div>
     </>
