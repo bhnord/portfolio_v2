@@ -3,7 +3,6 @@ export default function Project({
   title,
   description,
 }: {
-  num: string;
   img: string;
   title: string;
   description: string;
