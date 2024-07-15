@@ -13,23 +13,21 @@ export default function Project({
   //TODO: change color
   return (
     <>
-      <div className="flex items-center h-[1200px]  ">
-        <div className="w-screen text-right overflow-hidden ">
-          <div className="flex justify-end mr-14">
-            <div className="w-2/5 mr-20">
-              <p className="text-7xl">{title}</p>
-              <p className="text-2xl mt-10">{description}</p>
-            </div>
-            <div>
-              <img className="rounded-lg" src={img} width={500} />
-              <div className="mt-3">
-                {skills.map((skill) => (
-                  <span className="border-secondary-color border-2 border-solid rounded-xl px-3 ml-1">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+      <div className="h-[1100px] px-6 grid grid-cols-5 justify-end">
+        <div className="text-right col-span-3">
+          <div className="mr-16">
+            <h3 className="text-7xl">{title}</h3>
+            <p className="text-2xl mt-10">{description}</p>
+          </div>
+        </div>
+        <div className="col-span-2 overflow-hidden align">
+          <img className="block rounded-lg m-auto mr-0" src={img} width={500} />
+          <div className="flex mt-3 justify-end">
+            {skills.map((skill) => (
+              <span className="border-secondary-color border-2 border-solid rounded-xl px-3 ml-1">
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>

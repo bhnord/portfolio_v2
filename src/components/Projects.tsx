@@ -4,8 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 export default function Projects() {
-  const description1 = "";
-  const description2 = "";
+  const description1 =
+    "I created a custom chatroom experience using JavaScript (Node.js and Express), HTML, CSS, and NGINX. \
+    I implemented a game-like chatroom inspired by PictoChat where users can enter and move around with a \
+    custom-made character, character animations, and environment. Users are able to send messages, and drawings \
+    to other users in the chatroom. I used a Node.js / Express server to host multiple sockets and to hold the game logic and character \
+    positions similarly to online multiplayer games. I used NGINX to host a reverse proxy from my Raspberry Pi and provide access \
+    to the chatroom to users on my local network";
+  const description2 =
+    "I developed a website using the Spotify API, React, Typescript, Node.js, Express, and Linux. I created a \
+    custom website to keep track of my favorite songs and playlists, as well as control a Raspberry Pi remotely to \
+    play Spotify on a speaker. I pulled information about my account through the Spotify API and organized it to \
+    show my most recent listens, my top songs, and my playlists. It is hosted through a NGINX reverse proxy to \
+    enable users on the local network to see the site. A daemon runs on the same Raspberry Pi to control Spotify \
+    Playback through a connected speaker.";
   const description3 =
     "I worked in a group of three and traveled to Hong Kong to provide recommendations \
     as to whether or not STC Hong Kong could improve their current certification processes \
@@ -22,13 +34,13 @@ export default function Projects() {
     I defined a context free grammar (CFG) and used ANTLER to create a parse tree for input files. I used \
     this parse tree along with LLVM to compile the tree into a runnable x86_64 assembly executable file.";
 
-  const title1 = "title3";
-  const title2 = "title2";
+  const title1 = "Chatrooms";
+  const title2 = "Spotify Player";
   const title3 = "Blockchain Feasibility Assessment";
   const title4 = "Custom Programming Language";
 
-  const skills1: string[] = [];
-  const skills2: string[] = [];
+  const skills1 = ["JavaScript", "Node.js", "Express.js", "Web"];
+  const skills2 = ["React", "Node.js", "Express.js", "Linux"];
   const skills3 = ["Research"];
   const skills4 = ["C++", "Assembly", "Linux", "Clang"];
 
@@ -89,44 +101,50 @@ export default function Projects() {
 
   useEffect(() => {
     if (isInView1) {
-      setProject("01.");
+      setProject("1.");
     }
   }, [isInView1]);
   useEffect(() => {
     if (isInView2) {
-      setProject("02.");
+      setProject("2.");
     }
   }, [isInView2]);
 
   useEffect(() => {
     if (isInView3) {
-      setProject("03.");
+      setProject("3.");
     }
   }, [isInView3]);
 
   useEffect(() => {
     if (isInView4) {
-      setProject("04.");
+      setProject("4.");
     }
   }, [isInView4]);
 
   return (
     <>
-      <h2 className="text-6xl mb-[100px] ">Projects</h2>
-      <div className="w-screen">
-        <h1 className="text-[15rem] sticky top-8 ml-14">{project}</h1>
+      <h2 id="Projects" className="text-8xl mb-[100px] ">
+        Projects
+      </h2>
+      <div className="grid-gap grid grid-cols-12 items-start">
+        <h1 className="text-[14vw] sticky top-8 col-span-3 self-start leading-[.8] ml-[5rem]">
+          {project}
+        </h1>
 
-        {projects.map(({ ref, title, description, img, skills }) => (
-          <motion.div ref={ref} key={title}>
-            <Project
-              key={title}
-              img={img}
-              title={title}
-              description={description}
-              skills={skills}
-            />
-          </motion.div>
-        ))}
+        <div className="col-span-9 ">
+          {projects.map(({ ref, title, description, img, skills }) => (
+            <motion.div ref={ref} key={title}>
+              <Project
+                key={title}
+                img={img}
+                title={title}
+                description={description}
+                skills={skills}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </>
   );

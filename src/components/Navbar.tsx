@@ -1,12 +1,14 @@
 export default function Navbar() {
   //TODO: fix font
   //TODO: transform into diff mode
+  //TODO: add smooth scroll
+  //TODO: add animation on hover
   return (
     <>
-      <div className="text-2xl font-bold ">
-        <p>Projects</p>
-        <p>About</p>
-        <p>Contacts</p>
+      <div className="text-2xl font-bold text-secondary-color block sticky">
+        <a href="/#Projects">Projects</a>
+        <a href="/#About">About</a>
+        <a href="/#Contact">Contact</a>
       </div>
     </>
   );
