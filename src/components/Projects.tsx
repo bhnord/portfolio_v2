@@ -27,6 +27,11 @@ export default function Projects() {
   const title3 = "Blockchain Feasibility Assessment";
   const title4 = "Custom Programming Language";
 
+  const skills1: string[] = [];
+  const skills2: string[] = [];
+  const skills3 = ["Research"];
+  const skills4 = ["C++", "Assembly", "Linux", "Clang"];
+
   const img1 = img;
   const img2 = img;
   const img3 = img;
@@ -36,7 +41,7 @@ export default function Projects() {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  const options = { margin: "-600px" };
+  const options = { amount: 0.6 };
   const isInView1 = useInView(ref1, options);
   const isInView2 = useInView(ref2, options);
   const isInView3 = useInView(ref3, options);
@@ -48,6 +53,7 @@ export default function Projects() {
       title: title1,
       description: description1,
       img: img1,
+      skills: skills1,
       ref: ref1,
     },
     {
@@ -55,6 +61,7 @@ export default function Projects() {
       title: title2,
       description: description2,
       img: img2,
+      skills: skills2,
       ref: ref2,
     },
     {
@@ -62,6 +69,7 @@ export default function Projects() {
       title: title3,
       description: description3,
       img: img3,
+      skills: skills3,
       ref: ref3,
     },
     {
@@ -69,19 +77,16 @@ export default function Projects() {
       title: title4,
       description: description4,
       img: img4,
+      skills: skills4,
       ref: ref4,
     },
   ];
 
   //TODO: add scrolling animations
   //TODO: add more projects + descriptions
-  //TODO: add link spots
-  //
+
   const [project, setProject] = useState("01.");
 
-  //TODO: clean up somehow
-  //if bottom of div is in view?
-  //add offset somehow? -- check framer-motion
   useEffect(() => {
     if (isInView1) {
       setProject("01.");
@@ -111,13 +116,14 @@ export default function Projects() {
       <div className="w-screen">
         <h1 className="text-[15rem] sticky top-8 ml-14">{project}</h1>
 
-        {projects.map(({ ref, title, description, img }) => (
+        {projects.map(({ ref, title, description, img, skills }) => (
           <motion.div ref={ref} key={title}>
             <Project
               key={title}
               img={img}
               title={title}
               description={description}
+              skills={skills}
             />
           </motion.div>
         ))}
