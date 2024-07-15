@@ -97,28 +97,30 @@ export default function Projects() {
   //TODO: add scrolling animations
   //TODO: add more projects + descriptions
 
-  const [project, setProject] = useState("01.");
-
   useEffect(() => {
     if (isInView1) {
-      setProject("1.");
+      document.getElementById("projects-numbering").style.transform =
+        "translateY(0%)";
     }
   }, [isInView1]);
   useEffect(() => {
     if (isInView2) {
-      setProject("2.");
+      document.getElementById("projects-numbering").style.transform =
+        "translateY(-100%)";
     }
   }, [isInView2]);
 
   useEffect(() => {
     if (isInView3) {
-      setProject("3.");
+      document.getElementById("projects-numbering").style.transform =
+        "translateY(-200%)";
     }
   }, [isInView3]);
 
   useEffect(() => {
     if (isInView4) {
-      setProject("4.");
+      document.getElementById("projects-numbering").style.transform =
+        "translateY(-300%)";
     }
   }, [isInView4]);
 
@@ -127,10 +129,21 @@ export default function Projects() {
       <h2 id="Projects" className="text-8xl mb-[100px] ">
         Projects
       </h2>
-      <div className="grid-gap grid grid-cols-12 items-start">
-        <h1 className="text-[14vw] sticky top-8 col-span-3 self-start leading-[.8] ml-[5rem]">
-          {project}
-        </h1>
+      <div className="grid-gap grid grid-cols-12 items-start ">
+        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[5rem] overflow-hidden">
+          <span className="">0.</span>
+          <div className="relative">
+            <div
+              id="projects-numbering"
+              className="absolute h-full flex-col transition-all duration-1000 ease-in-out-cubic "
+            >
+              <span className="inline-block">1</span>
+              <span className="inline-block">2</span>
+              <span className="inline-block">3</span>
+              <span className="inline-block">4</span>
+            </div>
+          </div>
+        </div>
 
         <div className="col-span-9 ">
           {projects.map(({ ref, title, description, img, skills }) => (
