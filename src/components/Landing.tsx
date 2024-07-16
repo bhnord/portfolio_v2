@@ -4,7 +4,7 @@ export default function Landing() {
   return (
     <>
       <div className="flex h-screen justify-center items-center">
-        <div className="flex w-screen">
+        <div className="flex">
           <div className="flex-auto mr-20 text-right justify-between">
             <h1 className="text-9xl">
               Bernhard <br />

@@ -17,7 +17,7 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "80%"]);
   return (
     <ReactLenis root>
-      <div className="w-screen">
+      <div className="w-full">
         <img width={100} src={logo} className="absolute" />
         <div className="absolute top-10 right-10 text-right z-10">
           <Navbar />
