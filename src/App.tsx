@@ -19,12 +19,12 @@ function App() {
     <ReactLenis root>
       <div className="w-screen">
         <img width={100} src={logo} className="absolute" />
-        <div className="absolute top-10 right-10 text-right">
+        <div className="absolute top-10 right-10 text-right z-10">
           <Navbar />
         </div>
         <div ref={scrollRef} className="h-[200vh] mb-[-100vh]">
           <motion.div
-            style={{ translateY: y, opacity: opacity, scale: scale }}
+            style={{ y, opacity, scale }}
             className="z-0 sticky top-0"
             viewport={{ root: scrollRef }}
           >
