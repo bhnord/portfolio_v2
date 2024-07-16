@@ -21,7 +21,7 @@ export default function Project({
             <p className="text-lg mt-2">{description}</p>
           </div>
         </div>
-        <div className="md:col-span-2 md:block hidden overflow-hidden align ">
+        <div className="md:col-span-2 md:block hidden overflow-hidden align">
           <img className="block rounded-lg m-auto mr-0" src={img} width={500} />
           <div className="flex mt-3 justify-end">
             {skills.map((skill) => (

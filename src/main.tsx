@@ -7,10 +7,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio_v2",
     element: <App />,
   },
-  { path: "/contact", element: <Contact /> },
+  { path: "/portfolio_v2/contact", element: <Contact /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

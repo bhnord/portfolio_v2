@@ -22,7 +22,7 @@ function App() {
         <div className="absolute top-10 right-10 text-right z-10">
           <Navbar />
         </div>
-        <div ref={scrollRef} className="h-[200vh] mb-[-100vh]">
+        <section ref={scrollRef} className="h-[200vh] mb-[-100vh]">
           <motion.div
             style={{ y, opacity, scale }}
             className="z-0 sticky top-0"
@@ -30,10 +30,10 @@ function App() {
           >
             <Landing />
           </motion.div>
-        </div>
-        <div className="relative bg-black z-10 rounded-t-3xl">
+        </section>
+        <section className="relative bg-black z-10 rounded-t-3xl">
           <Projects />
-        </div>
+        </section>
         <About />
         <Contact />
       </div>

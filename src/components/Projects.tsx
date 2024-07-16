@@ -90,33 +90,40 @@ export default function Projects() {
     },
   ];
 
-  //TODO: add scrolling animations
-  //TODO: add more projects + descriptions
+  //TODO: find a better way to do this
 
   useEffect(() => {
     if (isInView1) {
-      document.getElementById("projects-numbering").style.transform =
-        "translateY(0%)";
+      const elem = document.getElementById("projects-numbering");
+      if (elem) {
+        elem.style.transform = "translateY(0%)";
+      }
     }
   }, [isInView1]);
   useEffect(() => {
     if (isInView2) {
-      document.getElementById("projects-numbering").style.transform =
-        "translateY(-100%)";
+      const elem = document.getElementById("projects-numbering");
+      if (elem) {
+        elem.style.transform = "translateY(-100%)";
+      }
     }
   }, [isInView2]);
 
   useEffect(() => {
     if (isInView3) {
-      document.getElementById("projects-numbering").style.transform =
-        "translateY(-200%)";
+      const elem = document.getElementById("projects-numbering");
+      if (elem) {
+        elem.style.transform = "translateY(-200%)";
+      }
     }
   }, [isInView3]);
 
   useEffect(() => {
     if (isInView4) {
-      document.getElementById("projects-numbering").style.transform =
-        "translateY(-300%)";
+      const elem = document.getElementById("projects-numbering");
+      if (elem) {
+        elem.style.transform = "translateY(-300%)";
+      }
     }
   }, [isInView4]);
 
