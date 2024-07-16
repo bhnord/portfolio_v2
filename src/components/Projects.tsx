@@ -126,7 +126,7 @@ export default function Projects() {
         Projects
       </h2>
       <div className="grid-gap grid grid-cols-12 items-start ">
-        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden">
+        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden font-block">
           <span className=" transition-all ease-in-out-cubic duration-1000">
             0
           </span>
