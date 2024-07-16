@@ -17,14 +17,14 @@ export default function Project({
   //TODO: fix font sizes
   return (
     <>
-      <div className="h-[100vh] px-6 grid grid-cols-5 justify-end">
-        <div className="text-right col-span-3">
+      <div className="md:h-[100vh] h-[80vh] px-6 grid grid-cols-5 justify-end">
+        <div className="text-right md:col-span-3 col-span-5">
           <div className="mr-16">
             <h3 className="text-[4vw]">{title}</h3>
             <p className="text-lg mt-2">{description}</p>
           </div>
         </div>
-        <div className="col-span-2 overflow-hidden align">
+        <div className="md:col-span-2 md:block hidden overflow-hidden align ">
           <img className="block rounded-lg m-auto mr-0" src={img} width={500} />
           <div className="flex mt-3 justify-end">
             {skills.map((skill) => (
