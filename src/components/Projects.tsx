@@ -61,7 +61,6 @@ export default function Projects() {
 
   const projects = [
     {
-      num: "01.",
       title: title1,
       description: description1,
       img: img1,
@@ -69,7 +68,6 @@ export default function Projects() {
       ref: ref1,
     },
     {
-      num: "02.",
       title: title2,
       description: description2,
       img: img2,
@@ -77,7 +75,6 @@ export default function Projects() {
       ref: ref2,
     },
     {
-      num: "03.",
       title: title3,
       description: description3,
       img: img3,
@@ -85,7 +82,6 @@ export default function Projects() {
       ref: ref3,
     },
     {
-      num: "04.",
       title: title4,
       description: description4,
       img: img4,
@@ -132,17 +128,17 @@ export default function Projects() {
       <div className="grid-gap grid grid-cols-12 items-start ">
         <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden">
           <span className=" transition-all ease-in-out-cubic duration-1000">
-            0.
+            0
           </span>
           <div className="relative">
             <div
               id="projects-numbering"
               className="absolute h-full flex-col  transition-all ease-in-out-cubic duration-1000 "
             >
-              <span className="inline-block">1</span>
-              <span className="inline-block">2</span>
-              <span className="inline-block">3</span>
-              <span className="inline-block">4</span>
+              <span className="inline-block">1.</span>
+              <span className="inline-block">2.</span>
+              <span className="inline-block">3.</span>
+              <span className="inline-block">4.</span>
             </div>
           </div>
         </div>
