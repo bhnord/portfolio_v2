@@ -37,7 +37,7 @@ export default function Projects() {
   const title1 = "Chatrooms";
   const title2 = "Spotify Player";
   const title3 = "Blockchain Feasibility Assessment";
-  const title4 = "Custom Programming Language";
+  const title4 = "Programming Language";
 
   const skills1 = ["JavaScript", "Node.js", "Express.js", "Web"];
   const skills2 = ["React", "Node.js", "Express.js", "Linux"];
@@ -130,12 +130,14 @@ export default function Projects() {
         Projects
       </h2>
       <div className="grid-gap grid grid-cols-12 items-start ">
-        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[5rem] overflow-hidden">
-          <span className="">0.</span>
+        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden">
+          <span className=" transition-all ease-in-out-cubic duration-1000">
+            0.
+          </span>
           <div className="relative">
             <div
               id="projects-numbering"
-              className="absolute h-full flex-col transition-all duration-1000 ease-in-out-cubic "
+              className="absolute h-full flex-col  transition-all ease-in-out-cubic duration-1000 "
             >
               <span className="inline-block">1</span>
               <span className="inline-block">2</span>

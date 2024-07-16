@@ -11,13 +11,17 @@ export default function Project({
 }) {
   //TODO: remove borders
   //TODO: change color
+  //TODO: fix line spacing (vw??)
+  //TODO: fix picture spacing
+  //TODO: clamp -- get rid of picture when window small enough
+  //TODO: fix font sizes
   return (
     <>
-      <div className="h-[1100px] px-6 grid grid-cols-5 justify-end">
+      <div className="h-[100vh] px-6 grid grid-cols-5 justify-end">
         <div className="text-right col-span-3">
           <div className="mr-16">
-            <h3 className="text-7xl">{title}</h3>
-            <p className="text-2xl mt-10">{description}</p>
+            <h3 className="text-[4vw]">{title}</h3>
+            <p className="text-lg mt-2">{description}</p>
           </div>
         </div>
         <div className="col-span-2 overflow-hidden align">
