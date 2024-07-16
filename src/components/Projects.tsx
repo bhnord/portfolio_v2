@@ -122,39 +122,41 @@ export default function Projects() {
 
   return (
     <>
-      <h2 id="Projects" className="text-8xl mb-[100px] ">
-        Projects
-      </h2>
-      <div className="grid-gap grid grid-cols-12 items-start ">
-        <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden font-block">
-          <span className=" transition-all ease-in-out-cubic duration-1000">
-            0
-          </span>
-          <div className="relative">
-            <div
-              id="projects-numbering"
-              className="absolute h-full flex-col  transition-all ease-in-out-cubic duration-1000 "
-            >
-              <span className="inline-block">1.</span>
-              <span className="inline-block">2.</span>
-              <span className="inline-block">3.</span>
-              <span className="inline-block">4.</span>
+      <div className="pt-14">
+        <h2 id="Projects" className="text-8xl mb-[100px] text-center">
+          Projects
+        </h2>
+        <div className="grid-gap grid grid-cols-12 items-start ">
+          <div className="flex sticky top-0 text-[14vw] col-span-3 ml-[4vw] overflow-hidden font-block">
+            <span className=" transition-all ease-in-out-cubic duration-1000">
+              0
+            </span>
+            <div className="relative">
+              <div
+                id="projects-numbering"
+                className="absolute h-full flex-col  transition-all ease-in-out-cubic duration-1000 "
+              >
+                <span className="inline-block">1.</span>
+                <span className="inline-block">2.</span>
+                <span className="inline-block">3.</span>
+                <span className="inline-block">4.</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="col-span-9 ">
-          {projects.map(({ ref, title, description, img, skills }) => (
-            <motion.div ref={ref} key={title}>
-              <Project
-                key={title}
-                img={img}
-                title={title}
-                description={description}
-                skills={skills}
-              />
-            </motion.div>
-          ))}
+          <div className="col-span-9 ">
+            {projects.map(({ ref, title, description, img, skills }) => (
+              <motion.div ref={ref} key={title}>
+                <Project
+                  key={title}
+                  img={img}
+                  title={title}
+                  description={description}
+                  skills={skills}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </>

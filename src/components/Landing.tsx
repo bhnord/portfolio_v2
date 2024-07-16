@@ -1,10 +1,8 @@
 import img from "../assets/face.jpg";
-import logo from "../assets/logo.png";
 export default function Landing() {
   //TODO: change p to headers
   return (
     <>
-      <img width={100} src={logo} className="absolute" />
       <div className="flex h-screen justify-center items-center">
         <div className="flex w-screen">
           <div className="flex-auto mr-20 text-right justify-between">
