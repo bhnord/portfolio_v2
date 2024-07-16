@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import "./App.css";
 import logo from "./assets/logo.png";
+import { ReactLenis } from "lenis/react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 function App() {
   const scrollRef = useRef(null);
@@ -15,7 +16,7 @@ function App() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "80%"]);
   return (
-    <>
+    <ReactLenis root>
       <div className="w-screen">
         <img width={100} src={logo} className="absolute" />
         <div className="absolute top-10 right-10 text-right">
@@ -36,7 +37,7 @@ function App() {
         <About />
         <Contact />
       </div>
-    </>
+    </ReactLenis>
   );
 }
 
