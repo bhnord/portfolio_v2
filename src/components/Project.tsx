@@ -11,9 +11,6 @@ export default function Project({
 }) {
   //TODO: remove borders
   //TODO: change color
-  //TODO: fix line spacing (vw??)
-  //TODO: fix picture spacing
-  //TODO: clamp -- get rid of picture when window small enough
   //TODO: fix font sizes
   return (
     <>

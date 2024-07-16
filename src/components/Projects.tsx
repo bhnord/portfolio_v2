@@ -1,7 +1,7 @@
 import Project from "./Project";
 import img from "../assets/face.jpg";
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export default function Projects() {
   const description1 =
