@@ -1,5 +1,8 @@
 import Project from "./Project";
 import img from "../assets/face.jpg";
+import p2img from "../assets/images/projects/proj2.png";
+import p3img from "../assets/images/projects/proj3.png";
+import p4img from "../assets/images/projects/proj4.png";
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -44,10 +47,16 @@ export default function Projects() {
   const skills3 = ["Research"];
   const skills4 = ["C++", "Assembly", "Linux", "Clang"];
 
+  const link1 = "https://github.com/bhnord/chatrooms";
+  const link2 = "https://github.com/bhnord/spotify-site-player";
+  const link3 = "https://digital.wpi.edu/concern/student_works/cn69m767g";
+  const link4 = "https://github.com/bhnord/CS4533";
+
+  //TODO: Possibly embed video
   const img1 = img;
-  const img2 = img;
-  const img3 = img;
-  const img4 = img;
+  const img2 = p2img;
+  const img3 = p3img;
+  const img4 = p4img;
 
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -65,6 +74,7 @@ export default function Projects() {
       description: description1,
       img: img1,
       skills: skills1,
+      link: link1,
       ref: ref1,
     },
     {
@@ -72,6 +82,7 @@ export default function Projects() {
       description: description2,
       img: img2,
       skills: skills2,
+      link: link2,
       ref: ref2,
     },
     {
@@ -79,6 +90,7 @@ export default function Projects() {
       description: description3,
       img: img3,
       skills: skills3,
+      link: link3,
       ref: ref3,
     },
     {
@@ -86,6 +98,7 @@ export default function Projects() {
       description: description4,
       img: img4,
       skills: skills4,
+      link: link4,
       ref: ref4,
     },
   ];
@@ -152,7 +165,7 @@ export default function Projects() {
           </div>
 
           <div className="col-span-9 ">
-            {projects.map(({ ref, title, description, img, skills }) => (
+            {projects.map(({ ref, title, description, img, skills, link }) => (
               <motion.div ref={ref} key={title}>
                 <Project
                   key={title}
@@ -160,6 +173,7 @@ export default function Projects() {
                   title={title}
                   description={description}
                   skills={skills}
+                  link={link}
                 />
               </motion.div>
             ))}

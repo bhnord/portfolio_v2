@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
 export default function Navbar() {
   //TODO: fix font
   //TODO: transform into diff mode
   //TODO: add smooth scroll
   //TODO: add animation on hover
+  //TODO: fix click
   return (
     <>
       <div className="text-2xl text-secondary-color block sticky">
-        <a href="/#Projects">Projects</a>
+        <Link to="/#Projects">Projects</Link>
         <a href="/#About">About</a>
-        <a href="/#Contact">Contact</a>
+        <Link to="/Contact">Contact</Link>
       </div>
     </>
   );

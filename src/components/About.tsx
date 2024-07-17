@@ -1,9 +1,11 @@
+import img from "../assets/face.jpg";
 export default function About() {
   return (
     <>
       <h2 className="text-8xl" id="About">
         About Me
       </h2>
+      <img src={img} width={500} />
       <p>
         I am working as a Back-End SWE at Pinterest, in the Infrastructure Org.
       </p>
@@ -14,7 +16,7 @@ export default function About() {
       </p>
       <p>
         When I'm not working, I enjoy cooking and baking as well as volunteering
-        at local community centers.
+        at my local community center.
       </p>
     </>
   );

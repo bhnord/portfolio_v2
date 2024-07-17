@@ -5,13 +5,16 @@ import Contact from "./components/Contact.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/portfolio_v2",
-    element: <App />,
-  },
-  { path: "/portfolio_v2/contact", element: <Contact /> },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    { path: "/contact", element: <Contact /> },
+  ],
+  { basename: "/portfolio_v2" },
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

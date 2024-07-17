@@ -3,11 +3,11 @@ import "./App.css";
 import logo from "./assets/logo.png";
 import { ReactLenis } from "lenis/react";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Footer from "./components/Footer";
 
 function App() {
   const scrollRef = useRef(null);
@@ -35,7 +35,8 @@ function App() {
           <Projects />
         </section>
         <About />
-        <Contact />
+
+        <Footer />
       </div>
     </ReactLenis>
   );
