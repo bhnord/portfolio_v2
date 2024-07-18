@@ -15,6 +15,10 @@ export default function About() {
         environment to another.
       </p>
       <p>
+        I graduated from Worcester Polytechnic Institute with a Masters and
+        Bachelors Computer Science in 2024
+      </p>
+      <p>
         When I'm not working, I enjoy cooking and baking as well as volunteering
         at my local community center.
       </p>
