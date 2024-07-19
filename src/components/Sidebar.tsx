@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 //TODO: maybe on hover make button get big
 export default function Sidebar() {
@@ -24,10 +25,38 @@ export default function Sidebar() {
               </button>
             </div>
             <nav className="text-6xl flex flex-col gap-8">
-              <Link to="/">Home</Link>
-              <Link to="/">Projects</Link>
-              <Link to="/#About">About</Link>
-              <Link to="/Contact">Contact</Link>
+              <HashLink
+                smooth
+                to="/#top"
+                className="hover:text-hover-color transition-all duration-300"
+                onClick={toggleOpen}
+              >
+                Home
+              </HashLink>
+
+              <HashLink
+                smooth
+                to="/#Projects"
+                className="hover:text-hover-color transition-all duration-300"
+                onClick={toggleOpen}
+              >
+                Projects
+              </HashLink>
+              <HashLink
+                smooth
+                to="/#About"
+                className="hover:text-hover-color transition-all duration-300"
+                onClick={toggleOpen}
+              >
+                About
+              </HashLink>
+              <Link
+                to="/Contact"
+                className="hover:text-hover-color transition-all duration-300"
+                onClick={toggleOpen}
+              >
+                Contact
+              </Link>
             </nav>
           </div>
         </div>

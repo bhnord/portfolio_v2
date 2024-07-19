@@ -10,6 +10,7 @@ export default {
       colors: {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)",
+        "hover-color": "var(--hover-color)",
       },
     },
   },

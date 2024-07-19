@@ -2,9 +2,7 @@ import img from "../assets/face.jpg";
 export default function About() {
   return (
     <>
-      <h2 className="text-8xl" id="About">
-        About Me
-      </h2>
+      <h2 className="text-8xl">About Me</h2>
       <img src={img} width={500} />
       <p>
         I am working as a Back-End SWE at Pinterest, in the Infrastructure Org.

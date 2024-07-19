@@ -18,8 +18,8 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "80%"]);
   return (
     <ReactLenis root>
-      <Sidebar />
       <div className="w-full">
+        <Sidebar />
         <img width={100} src={logo} className="absolute" />
         <div className="absolute top-10 right-10 text-right z-10">
           <Navbar />
@@ -33,11 +33,12 @@ function App() {
             <Landing />
           </motion.div>
         </section>
-        <section className="relative bg-black z-10 rounded-t-3xl">
+        <section id="Projects" className="relative bg-black z-10 rounded-t-3xl">
           <Projects />
         </section>
-        <About />
-
+        <section id="About">
+          <About />
+        </section>
         <Footer />
       </div>
     </ReactLenis>

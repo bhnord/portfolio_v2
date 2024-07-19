@@ -18,6 +18,7 @@
 
   --primary-color: #242424;
   --secondary-color: #e3e3e3;
+  --hover-color: red;
 }
 
 #root {
@@ -35,9 +36,6 @@
 
 a {
   display: block;
-}
-a:hover {
-  color: orange;
 }
 
 body {
