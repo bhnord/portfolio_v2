@@ -3,8 +3,9 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import { AnimatePresence, motion } from "framer-motion";
 
-//TODO: maybe on hover make button get big
+//TODO: maybe on big
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
@@ -12,64 +13,70 @@ export default function Sidebar() {
   };
   return (
     <>
-      {open ? (
-        <div>
-          <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-white opacity-15"></div>
-          <div className="flex flex-col items-center justify-center min-h-screen h-screen w-[75vw] fixed right-0 bg-black z-50 transition-opacity ">
-            <div className="fixed top-0 right-0">
-              <button
-                onClick={toggleOpen}
-                className="bg-white text-black rounded-full w-16 h-16 m-5"
-              >
-                <FontAwesomeIcon icon={faXmark} className="text-3xl" />
-              </button>
-            </div>
-            <nav className="text-6xl flex flex-col gap-8">
-              <HashLink
-                smooth
-                to="/#top"
-                className="hover:text-hover-color transition-all duration-300"
-                onClick={toggleOpen}
-              >
-                Home
-              </HashLink>
-
-              <HashLink
-                smooth
-                to="/#Projects"
-                className="hover:text-hover-color transition-all duration-300"
-                onClick={toggleOpen}
-              >
-                Projects
-              </HashLink>
-              <HashLink
-                smooth
-                to="/#About"
-                className="hover:text-hover-color transition-all duration-300"
-                onClick={toggleOpen}
-              >
-                About
-              </HashLink>
-              <Link
-                to="/Contact"
-                className="hover:text-hover-color transition-all duration-300"
-                onClick={toggleOpen}
-              >
-                Contact
-              </Link>
-            </nav>
+      <AnimatePresence>
+        {open && (
+          <div>
+            <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-black opacity-15"></div>
+            <motion.div
+              initial={{ x: "50vw" }}
+              animate={{ x: "0" }}
+              transition={{
+                type: "spring",
+                bounce: 0,
+                duration: 0.8,
+              }}
+              className={
+                "flex flex-col w-[35vw] items-center justify-center min-h-screen h-screen fixed right-0 bg-black z-50 "
+              }
+            >
+              <nav className="text-6xl flex flex-col gap-8">
+                <div className="relative group w-fit">
+                  <HashLink
+                    smooth
+                    to="/#top"
+                    className=" transition-all "
+                    onClick={toggleOpen}
+                  >
+                    Home
+                  </HashLink>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
+                </div>
+                <div className="relative group w-fit">
+                  <HashLink smooth to="/#Projects" onClick={toggleOpen}>
+                    Projects
+                  </HashLink>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
+                </div>
+                <div className="relative group w-fit">
+                  <HashLink
+                    smooth
+                    to="/#About"
+                    className=" transition-all "
+                    onClick={toggleOpen}
+                  >
+                    About
+                  </HashLink>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
+                </div>
+                <div className="relative group w-fit">
+                  <Link to="/Contact" onClick={toggleOpen}>
+                    Contact
+                  </Link>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
+                </div>
+              </nav>
+            </motion.div>
           </div>
-        </div>
-      ) : (
-        <div className="fixed top-0 right-0 z-40 ">
-          <button
-            onClick={toggleOpen}
-            className="rounded-full m-5 text-3xl aspect-square "
-          >
-            <FontAwesomeIcon icon={faBars} />
-          </button>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
+      <div className="fixed top-0 right-0 z-50 ">
+        <button
+          onClick={toggleOpen}
+          className="rounded-full m-5 text-3xl aspect-square "
+        >
+          <FontAwesomeIcon icon={open ? faXmark : faBars} />
+        </button>
+      </div>
     </>
   );
 }

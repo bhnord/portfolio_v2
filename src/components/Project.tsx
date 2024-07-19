@@ -11,16 +11,16 @@ export default function Project({
   skills: string[];
   link: string;
 }) {
-  //TODO: remove borders
   //TODO: change color
   //TODO: fix font sizes
-  //TODO: fix on mobile
   return (
     <>
       <div className="md:h-[80vh] h-[60vh] px-6 grid grid-cols-5 justify-end">
         <div className="text-right md:col-span-3 col-span-5">
           <div className="mr-16">
-            <h3 className="text-[4vw]">{title}</h3>
+            <a target="_blank" href={link}>
+              <h3 className="text-[4vw]">{title}</h3>
+            </a>
             <p className="text-lg mt-2">{description}</p>
           </div>
         </div>
