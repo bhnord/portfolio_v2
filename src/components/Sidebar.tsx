@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 import { AnimatePresence, motion } from "framer-motion";
 
 //TODO: maybe on big
-export default function Sidebar({ showButton }) {
+export default function Sidebar({ showButton }: { showButton: boolean }) {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen(!open);
