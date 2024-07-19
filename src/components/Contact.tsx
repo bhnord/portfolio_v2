@@ -2,16 +2,16 @@ import Sidebar from "./Sidebar";
 export default function Contact() {
   return (
     <>
-      <Sidebar />
       <div className="w-full h-screen">
-        <div className="p-8">
+        <Sidebar showButton={true} />
+        <div className="p-12 pt-28">
           <h2 className="text-8xl" id="Contact">
             Get In Contact
           </h2>
           <form className="text-3xl mt-5">
             <hr />
             <div className="grid grid-cols-7 py-6">
-              <div className="col-span-3">
+              <div className="col-span-3 pl-4">
                 <label htmlFor="name">Name</label>
               </div>
               <div className="col-span-4 ">
@@ -27,7 +27,7 @@ export default function Contact() {
 
             <hr />
             <div className="grid grid-cols-7 py-6">
-              <div className="col-span-3">
+              <div className="col-span-3 pl-4">
                 <label htmlFor="email">Email Address</label>
               </div>
 
@@ -43,7 +43,7 @@ export default function Contact() {
 
             <hr />
             <div className="grid grid-cols-7 py-6 ">
-              <div className="col-span-3">
+              <div className="col-span-3 pl-4">
                 <label htmlFor="description">Message</label>
               </div>
 

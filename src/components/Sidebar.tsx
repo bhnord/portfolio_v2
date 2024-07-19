@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 import { AnimatePresence, motion } from "framer-motion";
 
 //TODO: maybe on big
-export default function Sidebar() {
+export default function Sidebar({ showButton }) {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen(!open);
@@ -69,14 +69,20 @@ export default function Sidebar() {
           </div>
         )}
       </AnimatePresence>
-      <div className="fixed top-0 right-0 z-50 ">
-        <button
-          onClick={toggleOpen}
-          className="rounded-full m-5 text-3xl aspect-square "
-        >
-          <FontAwesomeIcon icon={open ? faXmark : faBars} />
-        </button>
-      </div>
+      <AnimatePresence>
+        {showButton && (
+          <motion.button
+            onClick={toggleOpen}
+            className="rounded-full m-5 text-3xl aspect-square fixed top-0 right-0 z-50 "
+            initial={{ scale: "0%" }}
+            animate={{ scale: "100%" }}
+            exit={{ scale: "0%" }}
+            transition={{ duration: 0.6 }}
+          >
+            <FontAwesomeIcon icon={open ? faXmark : faBars} />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </>
   );
 }
