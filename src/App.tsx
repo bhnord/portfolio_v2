@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const scrollRef = useRef(null);
@@ -17,6 +18,7 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "80%"]);
   return (
     <ReactLenis root>
+      <Sidebar />
       <div className="w-full">
         <img width={100} src={logo} className="absolute" />
         <div className="absolute top-10 right-10 text-right z-10">

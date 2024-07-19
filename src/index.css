@@ -20,6 +20,10 @@
   --secondary-color: #e3e3e3;
 }
 
+#root {
+  width: 100%;
+}
+
 @font-face {
   font-family: "block";
   src: url(./assets/fonts/Block/designer-block.regular.ttf);

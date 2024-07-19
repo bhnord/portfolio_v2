@@ -1,7 +1,9 @@
+import Sidebar from "./Sidebar";
 export default function Contact() {
   return (
     <>
-      <div className="w-screen h-screen">
+      <Sidebar />
+      <div className="w-full h-screen">
         <div className="p-8">
           <h2 className="text-8xl" id="Contact">
             Get In Contact
@@ -40,7 +42,7 @@ export default function Contact() {
             </div>
 
             <hr />
-            <div className="grid grid-cols-7 py-6 h-96">
+            <div className="grid grid-cols-7 py-6 ">
               <div className="col-span-3">
                 <label htmlFor="description">Message</label>
               </div>
@@ -50,13 +52,15 @@ export default function Contact() {
                   name="message"
                   required
                   placeholder="what do you want to say?"
-                  className="p-3 w-full h-full"
+                  className="p-3 w-full h-full min-h-96"
                 />
               </div>
             </div>
 
             <hr />
-            <button type="submit">Send</button>
+            <button type="submit" className="float-right mt-5">
+              Send
+            </button>
           </form>
         </div>
       </div>
