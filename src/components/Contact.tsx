@@ -2,9 +2,9 @@ import Sidebar from "./Sidebar";
 export default function Contact() {
   return (
     <>
-      <div className="w-full h-screen">
+      <div className="w-full min:h-screen">
         <Sidebar showButton={true} />
-        <div className="p-12 pt-28">
+        <div className="p-12 py-18">
           <h2 className="text-8xl" id="Contact">
             Get In Contact
           </h2>
