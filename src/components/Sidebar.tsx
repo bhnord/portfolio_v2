@@ -26,10 +26,10 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
                 duration: 0.8,
               }}
               className={
-                "flex flex-col w-[35vw] items-center justify-center min-h-screen h-screen fixed right-0 bg-black z-50 "
+                "flex flex-col md:w-[35vw] w-[50vw] items-center justify-center min-h-screen h-screen fixed right-0 bg-black z-50 "
               }
             >
-              <nav className="text-6xl flex flex-col gap-8">
+              <nav className="md:text-6xl text-[6vw] flex flex-col gap-8">
                 <div className="relative group w-fit">
                   <HashLink
                     smooth
@@ -73,7 +73,7 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
         {showButton && (
           <motion.button
             onClick={toggleOpen}
-            className="rounded-full m-5 text-3xl aspect-square fixed top-0 right-0 z-50 "
+            className="rounded-full m-5 md:text-3xl text-2xl aspect-square fixed top-0 right-0 z-50 "
             initial={{ scale: "0%" }}
             animate={{ scale: "100%" }}
             exit={{ scale: "0%" }}

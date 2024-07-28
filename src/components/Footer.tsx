@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <h2>
-        <Link to="/contact" className="text-9xl">
-          Contact Me
-        </Link>
-      </h2>
-      <div className="text-4xl flex">
+      <div className="text-4xl flex gap-12">
+        <span>
+          <Link to="/contact">Contact Me</Link>
+        </span>
+
         <span>
           <a target="_blank" href="https://github.com/bhnord">
             Github <FontAwesomeIcon icon={faGithub} />
