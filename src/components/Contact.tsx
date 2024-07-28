@@ -8,7 +8,7 @@ export default function Contact() {
           <h2 className="text-8xl" id="Contact">
             Get In Contact
           </h2>
-          <form className="text-3xl mt-5">
+          <form className="text-3xl mt-5 pb-24">
             <hr />
             <div className="grid grid-cols-7 py-6">
               <div className="col-span-3 pl-4">
