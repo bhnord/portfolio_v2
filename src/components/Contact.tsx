@@ -8,7 +8,11 @@ export default function Contact() {
           <h2 className="text-8xl" id="Contact">
             Get In Contact
           </h2>
-          <form className="text-3xl mt-5 pb-24">
+          <form
+            className="text-3xl mt-5 pb-24"
+            action="https://formsubmit.co/68f6eb9f1161463baacb23c2ac67579b"
+            method="POST"
+          >
             <hr />
             <div className="grid grid-cols-7 py-6">
               <div className="col-span-3 pl-4">
@@ -34,6 +38,7 @@ export default function Contact() {
               <div className="col-span-4 ">
                 <input
                   name="email"
+                  type="email"
                   required
                   placeholder="hello@gmail.com"
                   className="p-1 py-3 w-full"
