@@ -19,7 +19,7 @@ export default function Project({
         <div className="text-right md:col-span-3 col-span-5">
           <div className="md:mr-12 mr-1">
             <a target="_blank" href={link}>
-              <h3 className="text-[4vw]">{title}</h3>
+              <h3 className="md:text-[4vw] text-[7vw]">{title}</h3>
             </a>
             <p className="text-lg mt-2">{description}</p>
           </div>
