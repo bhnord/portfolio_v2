@@ -72,7 +72,7 @@ button {
 button:hover {
   background-color: orange;
 }
-
+/*
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -85,3 +85,4 @@ button:hover {
     background-color: #f9f9f9;
   }
 }
+*/
