@@ -140,9 +140,10 @@ export default function Projects() {
     }
   }, [isInView4]);
 
+  //TODO: add some transition to about page
   return (
     <>
-      <div className="pt-14">
+      <div className="pt-14 pb-[400px]">
         <h2 className="md:text-8xl text-[16vw] mb-[100px] text-center">
           Projects
         </h2>
@@ -165,18 +166,37 @@ export default function Projects() {
           </div>
 
           <div className="col-span-9 ">
-            {projects.map(({ ref, title, description, img, skills, link }) => (
-              <motion.div ref={ref} key={title}>
-                <Project
-                  key={title}
-                  img={img}
-                  title={title}
-                  description={description}
-                  skills={skills}
-                  link={link}
-                />
-              </motion.div>
-            ))}
+            {projects
+              .slice(0, -1)
+              .map(({ ref, title, description, img, skills, link }) => (
+                <div>
+                  <motion.div ref={ref} key={title}>
+                    <Project
+                      key={title}
+                      img={img}
+                      title={title}
+                      description={description}
+                      skills={skills}
+                      link={link}
+                    />
+                  </motion.div>
+                  <div className="md:pb-96 pb-52"></div>
+                </div>
+              ))}
+
+            <motion.div
+              ref={projects[projects.length - 1].ref}
+              key={projects[projects.length - 1].title}
+            >
+              <Project
+                key={projects[projects.length - 1].title}
+                img={projects[projects.length - 1].img}
+                title={projects[projects.length - 1].title}
+                description={projects[projects.length - 1].description}
+                skills={projects[projects.length - 1].skills}
+                link={projects[projects.length - 1].link}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

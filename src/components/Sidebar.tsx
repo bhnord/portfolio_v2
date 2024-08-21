@@ -26,7 +26,7 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
                 duration: 0.8,
               }}
               className={
-                "flex flex-col md:w-[35vw] w-[50vw] items-center justify-center min-h-screen h-screen fixed right-0 bg-black z-50 "
+                "flex flex-col md:w-[35vw] w-[50vw] items-center justify-center min-h-screen h-screen fixed right-0 top-0 bg-black z-50 "
               }
             >
               <nav className="md:text-6xl text-[6vw] flex flex-col gap-8">

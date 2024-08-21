@@ -10,10 +10,28 @@ export default function Landing() {
               Bernhard <br />
               Nordemann
             </h1>
-            <p className="text-4xl mt-10">Software Engineer at Pinterest</p>
+            <p className="text-4xl mt-10">
+              Software Engineer at{" "}
+              <span className="text-[#e4001d] font-bold">
+                <a href="https://www.pinterest.com/" target="_blank">
+                  Pinterest
+                </a>
+              </span>
+            </p>
             <p className="text-2xl mt-10">
-              Previously at Chewy and Dell <br />
-              Technologies
+              Previously at{" "}
+              <span className="text-[#1045c8] font-bold">
+                <a href="https://www.chewy.com/" target="_blank">
+                  Chewy{" "}
+                </a>
+              </span>
+              and{" "}
+              <span className="text-[#0672cb] font-bold">
+                <a href="https://www.dell.com/en-us" target="_blank">
+                  <br />
+                  Dell Technologies
+                </a>
+              </span>{" "}
             </p>
           </div>
           <div className="md:visible hidden flex-auto">

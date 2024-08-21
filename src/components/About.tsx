@@ -2,7 +2,7 @@ import img from "../assets/face.jpg";
 export default function About() {
   return (
     <>
-      <div className="pt-24 px-9  min:h-[100vh]">
+      <div className="pt-36 px-9  min:h-[100vh]">
         <h2 className="text-8xl">About Me</h2>
         <div className="grid gap-9 grid-cols-5 mt-16">
           <div className="flex items-center justify-center col-span-2">

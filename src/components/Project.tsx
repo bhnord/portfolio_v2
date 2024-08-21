@@ -15,7 +15,7 @@ export default function Project({
   //TODO: fix font sizes
   return (
     <>
-      <div className="md:pb-96 pb-52 px-6 grid grid-cols-5 justify-end">
+      <div className=" px-6 grid grid-cols-5 justify-end">
         <div className="text-right md:col-span-3 col-span-5">
           <div className="md:mr-12 mr-1">
             <a target="_blank" href={link}>
