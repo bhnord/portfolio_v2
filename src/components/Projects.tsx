@@ -13,7 +13,7 @@ export default function Projects() {
     custom-made character, character animations, and environment. Users are able to send messages, and drawings \
     to other users in the chatroom. I used a Node.js / Express server to host multiple sockets and to hold the game logic and character \
     positions similarly to online multiplayer games. I used NGINX to host a reverse proxy from my Raspberry Pi and provide access \
-    to the chatroom to users on my local network";
+    to the chatroom to users on my local network.";
   const description2 =
     "I developed a website using the Spotify API, React, Typescript, Node.js, Express, and Linux. I created a \
     custom website to keep track of my favorite songs and playlists, as well as control a Raspberry Pi remotely to \
