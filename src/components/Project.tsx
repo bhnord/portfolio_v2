@@ -15,11 +15,11 @@ export default function Project({
   //TODO: fix font sizes
   return (
     <>
-      <div className=" px-6 grid grid-cols-5 justify-end">
+      <div className="px-6 grid grid-cols-5 justify-end">
         <div className="text-right md:col-span-3 col-span-5">
           <div className="md:mr-12 mr-1">
             <a target="_blank" href={link}>
-              <h3 className="md:text-[4vw] text-[7vw]">{title}</h3>
+              <h3 className="md:text-[4vw] text-[9vw]">{title}</h3>
             </a>
             <p className="text-xl mt-2">{description}</p>
           </div>
