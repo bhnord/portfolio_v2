@@ -16,7 +16,7 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
       <AnimatePresence>
         {open && (
           <div>
-            <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-black opacity-15"></div>
+            <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-black opacity-60"></div>
             <motion.div
               initial={{ x: "50vw" }}
               animate={{ x: "0" }}

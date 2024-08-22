@@ -21,7 +21,7 @@ export default function Project({
             <a target="_blank" href={link}>
               <h3 className="md:text-[4vw] text-[7vw]">{title}</h3>
             </a>
-            <p className="text-lg mt-2">{description}</p>
+            <p className="text-xl mt-2">{description}</p>
           </div>
         </div>
         <div className="md:col-span-2 md:block hidden overflow-hidden align">

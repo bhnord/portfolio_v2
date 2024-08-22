@@ -39,7 +39,10 @@ function App() {
             <Landing />
           </motion.div>
         </section>
-        <section id="Projects" className="relative bg-black z-10 rounded-t-3xl">
+        <section
+          id="Projects"
+          className="relative bg-[black] z-10 rounded-t-3xl"
+        >
           <Projects />
         </section>
         <section id="About" className="mb-56">

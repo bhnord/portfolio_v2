@@ -1,4 +1,3 @@
-import img from "../assets/face.jpg";
 export default function Landing() {
   //TODO: change p to headers
   return (
@@ -33,9 +32,6 @@ export default function Landing() {
                 </a>
               </span>{" "}
             </p>
-          </div>
-          <div className="md:visible hidden flex-auto">
-            <img width={500} src={img} />
           </div>
         </div>
       </div>
