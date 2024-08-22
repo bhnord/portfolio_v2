@@ -16,7 +16,7 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
       <AnimatePresence>
         {open && (
           <div>
-            <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-black opacity-60"></div>
+            <div className="fixed top-0 left-0 h-screen w-screen justify-end z-40 bg-black opacity-70"></div>
             <motion.div
               initial={{ x: "50vw" }}
               animate={{ x: "0" }}
@@ -29,8 +29,8 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
                 "flex flex-col md:w-[35vw] w-[50vw] items-center justify-center min-h-screen h-screen fixed right-0 top-0 bg-black z-50 "
               }
             >
-              <nav className="md:text-6xl text-[6vw] flex flex-col gap-8">
-                <div className="relative group w-fit">
+              <nav className="md:text-5xl text-[6vw] flex flex-col gap-8">
+                <div className="relative group w-fit md:mb-12 md:pb-3">
                   <HashLink
                     smooth
                     to="/#top"
@@ -41,13 +41,13 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
                   </HashLink>
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
                 </div>
-                <div className="relative group w-fit">
+                <div className="relative group w-fit md:mb-12 md:pb-3">
                   <HashLink smooth to="/#Projects" onClick={toggleOpen}>
                     Projects
                   </HashLink>
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
                 </div>
-                <div className="relative group w-fit">
+                <div className="relative group w-fit md:mb-12 md:pb-3">
                   <HashLink
                     smooth
                     to="/#About"
@@ -58,7 +58,7 @@ export default function Sidebar({ showButton }: { showButton: boolean }) {
                   </HashLink>
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
                 </div>
-                <div className="relative group w-fit">
+                <div className="relative group w-fit md:pb-3">
                   <Link to="/Contact" onClick={toggleOpen}>
                     Contact
                   </Link>

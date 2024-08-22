@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import "./App.css";
-import logo from "./assets/logo.png";
 import { ReactLenis } from "lenis/react";
 import About from "./components/About";
 import Landing from "./components/Landing";
@@ -27,7 +26,6 @@ function App() {
     <ReactLenis root>
       <div className="w-full">
         <Sidebar showButton={sbButton} />
-        <img width={100} src={logo} className="absolute" />
         <div ref={ref} className="absolute top-10 right-10 text-right z-10">
           <Navbar />
         </div>

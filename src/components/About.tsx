@@ -2,13 +2,18 @@ import img from "../assets/images/bernhard_nordemann.jpg";
 export default function About() {
   return (
     <>
-      <div className="pt-36 px-9  min:h-[100vh]">
-        <h2 className="text-8xl ml-16">About Me</h2>
-        <div className="grid gap-9 grid-cols-5 pt-28">
-          <div className="flex items-center justify-center col-span-2">
+      <div className="pt-36 px-9 min:h-[100vh]">
+        <h2 className="text-8xl md:ml-10 md:text-left text-center pb-28">
+          About Me
+        </h2>
+        <div className="flex md:hidden items-center justify-center pb-16">
+          <img src={img} width={500} />
+        </div>
+        <div className="grid gap-9 grid-cols-5 ">
+          <div className="hidden md:flex items-center justify-center col-span-2">
             <img src={img} width={500} />
           </div>
-          <div className="col-span-3 text-2xl">
+          <div className="md:col-span-3 col-span-5 text-2xl ">
             <p>
               I am working as a Back-End SWE at Pinterest, in the Infrastructure
               Org.
