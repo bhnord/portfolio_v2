@@ -3,14 +3,14 @@ export default function About() {
   return (
     <>
       <div className="pt-36 px-9 min:h-[100vh]">
-        <h2 className="text-8xl md:ml-10 md:text-left text-center pb-28">
+        <h2 className="md:text-8xl md:ml-10 md:text-left text-center md:pb-28 pb-16 text-7xl">
           About Me
         </h2>
         <div className="flex md:hidden items-center justify-center pb-16">
           <img src={img} width={500} />
         </div>
         <div className="grid gap-9 grid-cols-5 ">
-          <div className="hidden md:flex items-center justify-center col-span-2">
+          <div className="hidden md:flex items-center justify-left col-span-2 pl-8">
             <img src={img} width={500} />
           </div>
           <div className="md:col-span-3 col-span-5 text-2xl ">
