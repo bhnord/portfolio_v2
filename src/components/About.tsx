@@ -32,7 +32,9 @@ export default function About() {
               volunteering at my local community center.
             </p>
             <br />
-            <p>I also love travelling trying new foods all around the world</p>
+            <p>
+              I also love travelling and trying new foods all around the world.
+            </p>
           </div>
         </div>
       </div>
