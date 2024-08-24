@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <div className="align-middle pb-14">
-        <div className="text-xl md:text-2xl flex md:gap-12 gap-6 justify-center">
+        <div className="text-md md:text-2xl flex md:gap-12 gap-6 justify-center">
           <span>
             <Link to="/contact">Contact Form</Link>
           </span>
