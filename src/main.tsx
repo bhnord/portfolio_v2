@@ -13,7 +13,7 @@ const router = createBrowserRouter(
     },
     { path: "/contact", element: <Contact /> },
   ],
-  { basename: "/portfolio_v2" },
+  { basename: "/" },
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
