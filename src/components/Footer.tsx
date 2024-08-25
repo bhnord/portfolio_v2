@@ -19,7 +19,7 @@ export default function Footer() {
           <span>
             <a
               target="_blank"
-              href="https://https://www.linkedin.com/in/bernhard-nordemann/"
+              href="https://www.linkedin.com/in/bernhard-nordemann/"
             >
               LinkedIn <FontAwesomeIcon icon={faLinkedin} />
             </a>
