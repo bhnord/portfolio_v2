@@ -10,17 +10,18 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 
 function App() {
+  // <div className="bg-gradient-to-b h-[60vh] from-black to-[#1101618]"></div>
   //Home page shrink opacity animation
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: scrollRef });
   const y = useTransform(scrollYProgress, [0, 1], ["0px", "80px"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
   const scale = useTransform(scrollYProgress, [0, 1], ["100%", "80%"]);
 
   //trigger animation when cant see homepage
 
   const ref = useRef(null);
-  const sbButton = !useInView(ref, { margin: "500px" });
+  const sbButton = !useInView(ref, { margin: "1000px" });
 
   return (
     <ReactLenis root>
@@ -43,6 +44,15 @@ function App() {
         >
           <Projects />
         </section>
+        <div className="h-[18px] bg-black mt-10" />
+        <div className="h-[16px] bg-black mt-10" />
+        <div className="h-[14px] bg-black mt-10" />
+        <div className="h-[12px] bg-black mt-10" />
+        <div className="h-[10px] bg-black mt-10" />
+        <div className="h-[8px] bg-black mt-10" />
+        <div className="h-[6px] bg-black mt-10" />
+        <div className="h-[4px] bg-black mt-10" />
+        <div className="h-[2px] bg-black mt-10" />
         <section id="About" className="mb-56">
           <About />
         </section>

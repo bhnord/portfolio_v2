@@ -143,7 +143,7 @@ export default function Projects() {
   //TODO: add some transition to about page
   return (
     <>
-      <div className="pt-14 pb-[400px]">
+      <div className="pt-14 pb-[120px]">
         <h2 className="md:text-8xl text-[16vw] mb-[100px] text-center">
           Projects
         </h2>
