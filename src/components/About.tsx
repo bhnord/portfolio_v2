@@ -2,7 +2,7 @@ import img from "../assets/images/bernhard_nordemann.jpg";
 export default function About() {
   return (
     <>
-      <div className="pt-36 px-9 min:h-[100vh]">
+      <div className="pt-48 px-9 min:h-[100vh]">
         <h2 className="md:text-8xl md:ml-10 md:text-left text-center md:pb-28 pb-16 text-7xl">
           About Me
         </h2>

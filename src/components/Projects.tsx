@@ -1,5 +1,5 @@
 import Project from "./Project";
-import img from "../assets/face.jpg";
+import p1img from "../assets/images/projects/proj1.png";
 import p2img from "../assets/images/projects/proj2.png";
 import p3img from "../assets/images/projects/proj3.png";
 import p4img from "../assets/images/projects/proj4.png";
@@ -53,7 +53,7 @@ export default function Projects() {
   const link4 = "https://github.com/bhnord/CS4533";
 
   //TODO: Possibly embed video
-  const img1 = img;
+  const img1 = p1img;
   const img2 = p2img;
   const img3 = p3img;
   const img4 = p4img;

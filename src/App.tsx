@@ -40,19 +40,11 @@ function App() {
         </section>
         <section
           id="Projects"
-          className="relative bg-[black] z-10 rounded-t-3xl"
+          className="relative bg-[black] z-10 rounded-t-3xl "
         >
           <Projects />
         </section>
-        <div className="h-[18px] bg-black mt-10" />
-        <div className="h-[16px] bg-black mt-10" />
-        <div className="h-[14px] bg-black mt-10" />
-        <div className="h-[12px] bg-black mt-10" />
-        <div className="h-[10px] bg-black mt-10" />
-        <div className="h-[8px] bg-black mt-10" />
-        <div className="h-[6px] bg-black mt-10" />
-        <div className="h-[4px] bg-black mt-10" />
-        <div className="h-[2px] bg-black mt-10" />
+
         <section id="About" className="mb-56">
           <About />
         </section>
