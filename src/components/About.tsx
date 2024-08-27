@@ -9,11 +9,11 @@ export default function About() {
         <div className="flex md:hidden items-center justify-center pb-16">
           <img src={img} width={500} />
         </div>
-        <div className="grid gap-9 grid-cols-5 ">
+        <div className="grid gap-9 grid-cols-6 ">
           <div className="hidden md:flex items-center justify-left col-span-2 pl-8">
-            <img src={img} width={500} />
+            <img src={img} width={600} />
           </div>
-          <div className="md:col-span-3 col-span-5 text-2xl ">
+          <div className="md:col-span-4 col-span-6 md:text-3xl text-2xl">
             <p>
               I am working as a Back-End SWE at Pinterest, in the Infrastructure
               Org.

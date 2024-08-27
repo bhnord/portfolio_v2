@@ -169,19 +169,16 @@ export default function Projects() {
             {projects
               .slice(0, -1)
               .map(({ ref, title, description, img, skills, link }) => (
-                <div>
-                  <motion.div ref={ref} key={title}>
-                    <Project
-                      key={title}
-                      img={img}
-                      title={title}
-                      description={description}
-                      skills={skills}
-                      link={link}
-                    />
-                  </motion.div>
-                  <div className="md:pb-96 pb-52"></div>
-                </div>
+                <motion.div ref={ref} key={title} className="md:pb-96 pb-52">
+                  <Project
+                    key={title}
+                    img={img}
+                    title={title}
+                    description={description}
+                    skills={skills}
+                    link={link}
+                  />
+                </motion.div>
               ))}
 
             <motion.div
