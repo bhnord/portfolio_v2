@@ -4,12 +4,14 @@ export default function Project({
   description,
   skills,
   link,
+  alt,
 }: {
   img: string;
   title: string;
   description: string;
   skills: string[];
   link: string;
+  alt: string;
 }) {
   //TODO: change color
   //TODO: fix font sizes
@@ -25,11 +27,7 @@ export default function Project({
         </a>
         <div className="block md:hidden md:col-span-2 pb-8 md:pb-0 col-span-6 overflow-hidden align ">
           <a target="_blank" href={link}>
-            <img
-              className="block rounded-lg m-auto mr-0"
-              src={img}
-              width={500}
-            />
+            <img alt={alt} className="block rounded-lg m-auto mr-0" src={img} />
             <div className="flex mt-3 justify-end">
               {skills.map((skill) => (
                 <span
@@ -54,7 +52,7 @@ export default function Project({
 
         <div className="hidden md:block md:col-span-2 pb-8 pr-5 md:pb-0 col-span-6 overflow-hidden align ">
           <a target="_blank" href={link}>
-            <img className="block rounded-lg m-auto mr-0" src={img} />
+            <img alt={alt} className="block rounded-lg m-auto mr-0" src={img} />
             <div className="flex mt-3 justify-end">
               {skills.map((skill) => (
                 <span

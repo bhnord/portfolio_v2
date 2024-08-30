@@ -52,6 +52,15 @@ export default function Projects() {
   const link3 = "https://digital.wpi.edu/concern/student_works/cn69m767g";
   const link4 = "https://github.com/bhnord/CS4533";
 
+  const alt1 =
+    'Screenshot of "Chatrooms" application with multiple users sending images and text through the application';
+  const alt2 =
+    'Screenshot of "Spotify Player" application displaying top 10 songs, recent songs, liked songs, and various playlists';
+  const alt3 =
+    "Cover page of a white paper analyzing the value of integrating blockchain into the company STC Hong Kong, and in the standards and testing industry as a whole";
+  const alt4 =
+    "Sample code displaying the backend of a custom programming language";
+
   //TODO: Possibly embed video
   const img1 = p1img;
   const img2 = p2img;
@@ -76,6 +85,7 @@ export default function Projects() {
       skills: skills1,
       link: link1,
       ref: ref1,
+      alt: alt1,
     },
     {
       title: title2,
@@ -84,6 +94,7 @@ export default function Projects() {
       skills: skills2,
       link: link2,
       ref: ref2,
+      alt: alt2,
     },
     {
       title: title3,
@@ -92,6 +103,7 @@ export default function Projects() {
       skills: skills3,
       link: link3,
       ref: ref3,
+      alt: alt3,
     },
     {
       title: title4,
@@ -100,6 +112,7 @@ export default function Projects() {
       skills: skills4,
       link: link4,
       ref: ref4,
+      alt: alt4,
     },
   ];
 
@@ -168,7 +181,7 @@ export default function Projects() {
           <div className="md:col-span-9 col-span-12">
             {projects
               .slice(0, -1)
-              .map(({ ref, title, description, img, skills, link }) => (
+              .map(({ ref, title, description, img, skills, link, alt }) => (
                 <motion.div ref={ref} key={title} className="md:pb-96 pb-52">
                   <Project
                     key={title}
@@ -177,6 +190,7 @@ export default function Projects() {
                     description={description}
                     skills={skills}
                     link={link}
+                    alt={alt}
                   />
                 </motion.div>
               ))}
@@ -192,6 +206,7 @@ export default function Projects() {
                 description={projects[projects.length - 1].description}
                 skills={projects[projects.length - 1].skills}
                 link={projects[projects.length - 1].link}
+                alt={projects[projects.length - 1].alt}
               />
             </motion.div>
           </div>

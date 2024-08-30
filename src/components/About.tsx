@@ -7,11 +7,11 @@ export default function About() {
           About Me
         </h2>
         <div className="flex md:hidden items-center justify-center pb-16">
-          <img src={img} width={500} />
+          <img src={img} className="w-full max-w-[500px]" />
         </div>
         <div className="grid gap-9 grid-cols-6 ">
           <div className="hidden md:flex items-center justify-left col-span-2 pl-8">
-            <img src={img} width={600} />
+            <img src={img} className="w-full max-w-96 " />
           </div>
           <div className="md:col-span-4 col-span-6 md:text-3xl text-2xl">
             <p>
