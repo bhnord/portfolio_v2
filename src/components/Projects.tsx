@@ -34,7 +34,7 @@ export default function Projects() {
     I created a custom grammar and structure for the language and implemented \
     the front and back end of the compiler for the recursive language. I implemented variables, \
     procedures, functions, return statements, the ability to import C++ libraries and to link files. \
-    I defined a context free grammar (CFG) and used ANTLER to create a parse tree for input files. I used \
+    I defined a context free grammar (CFG) and used ANTLR to create a parse tree for input files. I used \
     this parse tree along with LLVM to compile the tree into a runnable x86_64 assembly executable file.";
 
   const title1 = "Chatrooms";
@@ -48,7 +48,7 @@ export default function Projects() {
   const skills4 = ["C++", "Assembly", "Linux", "Clang"];
 
   const link1 = "https://github.com/bhnord/chatrooms";
-  const link2 = "https://github.com/bhnord/spotify-site-player";
+  const link2 = "https://spotifyplayer.bhnord.com/";
   const link3 = "https://digital.wpi.edu/concern/student_works/cn69m767g";
   const link4 = "https://github.com/bhnord/CS4533";
 
