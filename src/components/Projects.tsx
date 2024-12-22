@@ -17,10 +17,9 @@ export default function Projects() {
   const description2 =
     "I developed a website using the Spotify API, React, Typescript, Node.js, Express, and Linux. I created a \
     custom website to keep track of my favorite songs and playlists, as well as control a Raspberry Pi remotely to \
-    play Spotify on a speaker. I pulled information about my account through the Spotify API and organized it to \
-    show my most recent listens, my top songs, and my playlists. It is hosted through a NGINX reverse proxy to \
-    enable users on the local network to see the site. A daemon runs on the same Raspberry Pi to control Spotify \
-    Playback through a connected speaker.";
+    play Spotify on a speaker, and play the songs locally on the website via an embedded player. I pulled information about my account through the Spotify API and organized it to \
+    show my most recent listens, my top songs, and my playlists. I host the api portion of the application \
+    using an Oracle Cloud server to keep api keys used secret. I host the frontend of the website through github pages.";
   const description3 =
     "I worked in a group of three and traveled to Hong Kong to provide recommendations \
     as to whether or not STC Hong Kong could improve their current certification processes \
