@@ -1,216 +1,135 @@
-import Project from "./Project";
+import { motion } from "framer-motion";
 import p1img from "../assets/images/projects/proj1.png";
 import p2img from "../assets/images/projects/proj2.png";
 import p3img from "../assets/images/projects/proj3.png";
 import p4img from "../assets/images/projects/proj4.png";
-import { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+
+const projects = [
+  {
+    title: "Chatrooms",
+    tag: "01",
+    description:
+      "A PictoChat-inspired multiplayer chatroom you can roam around in. Node.js/Express sockets with character movement, drawings, and messages (proxied from a Raspberry Pi via NGINX).",
+    img: p1img,
+    alt: 'Screenshot of the "Chatrooms" application with multiple users sending images and text',
+    skills: ["JavaScript", "Node.js", "Express", "Web"],
+    link: "https://github.com/bhnord/chatrooms",
+    tint: "bg-lime/10",
+    chip: "bg-lime text-bg",
+    arrow: "group-hover:text-lime",
+    offset: "",
+  },
+  {
+    title: "Spotify Player",
+    tag: "02",
+    description:
+      "A dashboard for my listening habits built on the Spotify API: top songs, recent plays, and playlists, plus remote control of a speaker Raspberry Pi and an embedded player.",
+    img: p2img,
+    alt: 'Screenshot of "Spotify Player" showing top songs, recent songs, and playlists',
+    skills: ["React", "Node.js", "Express", "Linux"],
+    link: "https://spotifyplayer.bhnord.com/",
+    tint: "bg-pink/10",
+    chip: "bg-pink text-bg",
+    arrow: "group-hover:text-pink",
+    offset: "md:translate-y-12",
+  },
+  {
+    title: "Blockchain Assessment",
+    tag: "03",
+    description:
+      "Traveled to Hong Kong with a team of three to assess whether STC Hong Kong could improve certification with blockchain: interviews, weekly briefings, and a published white paper.",
+    img: p3img,
+    alt: "Cover page of a white paper analyzing blockchain in the standards and testing industry",
+    skills: ["Research", "Interviewing"],
+    link: "https://digital.wpi.edu/concern/student_works/cn69m767g",
+    tint: "bg-cyan/10",
+    chip: "bg-cyan text-bg",
+    arrow: "group-hover:text-cyan",
+    offset: "",
+  },
+  {
+    title: "Programming Language",
+    tag: "04",
+    description:
+      "A recursive programming language built from scratch in C++: custom grammar, ANTLR parse trees, and an LLVM backend producing x86_64 assembly.",
+    img: p4img,
+    alt: "Sample code from the backend of a custom programming language",
+    skills: ["C++", "LLVM", "Assembly", "Linux"],
+    link: "https://github.com/bhnord/CS4533",
+    tint: "bg-yellow/10",
+    chip: "bg-yellow text-bg",
+    arrow: "group-hover:text-yellow",
+    offset: "md:translate-y-12",
+  },
+];
 
 export default function Projects() {
-  const description1 =
-    "I created a custom chatroom experience using JavaScript (Node.js and Express), HTML, CSS, and NGINX. \
-    I implemented a game-like chatroom inspired by PictoChat where users can enter and move around with a \
-    custom-made character, character animations, and environment. Users are able to send messages, and drawings \
-    to other users in the chatroom. I used a Node.js / Express server to host multiple sockets and to hold the game logic and character \
-    positions similarly to online multiplayer games. I used NGINX to host a reverse proxy from my Raspberry Pi and provide access \
-    to the chatroom to users on my local network.";
-  const description2 =
-    "I developed a website using the Spotify API, React, Typescript, Node.js, Express, and Linux. I created a \
-    custom website to keep track of my favorite songs and playlists, as well as control a Raspberry Pi remotely to \
-    play Spotify on a speaker, and play the songs locally on the website via an embedded player. I pulled information about my account through the Spotify API and organized it to \
-    show my most recent listens, my top songs, and my playlists. I host the api portion of the application \
-    using an Oracle Cloud server to keep api keys used secret. I host the frontend of the website through github pages.";
-  const description3 =
-    "I worked in a group of three and traveled to Hong Kong to provide recommendations \
-    as to whether or not STC Hong Kong could improve their current certification processes \
-    by using blockchain. We organized and conducted interviews with employees from Verizon, \
-    DigiKerma, HerBChain, and within STC. We gave weekly presentations as to the progress of \
-    our research, and compiled a white paper detailing our research, methods, and conclusions \
-    that was published by Worcester Polytechnic Institute.";
-
-  const description4 =
-    "I developed a recursive programming language from scratch in C++. \
-    I created a custom grammar and structure for the language and implemented \
-    the front and back end of the compiler for the recursive language. I implemented variables, \
-    procedures, functions, return statements, the ability to import C++ libraries and to link files. \
-    I defined a context free grammar (CFG) and used ANTLR to create a parse tree for input files. I used \
-    this parse tree along with LLVM to compile the tree into a runnable x86_64 assembly executable file.";
-
-  const title1 = "Chatrooms";
-  const title2 = "Spotify Player";
-  const title3 = "Blockchain Feasibility Assessment";
-  const title4 = "Programming Language";
-
-  const skills1 = ["JavaScript", "Node.js", "Express.js", "Web"];
-  const skills2 = ["React", "Node.js", "Express.js", "Linux"];
-  const skills3 = ["Research"];
-  const skills4 = ["C++", "Assembly", "Linux", "Clang"];
-
-  const link1 = "https://github.com/bhnord/chatrooms";
-  const link2 = "https://spotifyplayer.bhnord.com/";
-  const link3 = "https://digital.wpi.edu/concern/student_works/cn69m767g";
-  const link4 = "https://github.com/bhnord/CS4533";
-
-  const alt1 =
-    'Screenshot of "Chatrooms" application with multiple users sending images and text through the application';
-  const alt2 =
-    'Screenshot of "Spotify Player" application displaying top 10 songs, recent songs, liked songs, and various playlists';
-  const alt3 =
-    "Cover page of a white paper analyzing the value of integrating blockchain into the company STC Hong Kong, and in the standards and testing industry as a whole";
-  const alt4 =
-    "Sample code displaying the backend of a custom programming language";
-
-  //TODO: Possibly embed video
-  const img1 = p1img;
-  const img2 = p2img;
-  const img3 = p3img;
-  const img4 = p4img;
-
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const options = { amount: 0.6 };
-  const isInView1 = useInView(ref1, options);
-  const isInView2 = useInView(ref2, options);
-  const isInView3 = useInView(ref3, options);
-  const isInView4 = useInView(ref4, options);
-
-  const projects = [
-    {
-      title: title1,
-      description: description1,
-      img: img1,
-      skills: skills1,
-      link: link1,
-      ref: ref1,
-      alt: alt1,
-    },
-    {
-      title: title2,
-      description: description2,
-      img: img2,
-      skills: skills2,
-      link: link2,
-      ref: ref2,
-      alt: alt2,
-    },
-    {
-      title: title3,
-      description: description3,
-      img: img3,
-      skills: skills3,
-      link: link3,
-      ref: ref3,
-      alt: alt3,
-    },
-    {
-      title: title4,
-      description: description4,
-      img: img4,
-      skills: skills4,
-      link: link4,
-      ref: ref4,
-      alt: alt4,
-    },
-  ];
-
-  //TODO: find a better way to do this
-
-  useEffect(() => {
-    if (isInView1) {
-      const elem = document.getElementById("projects-numbering");
-      if (elem) {
-        elem.style.transform = "translateY(0%)";
-      }
-    }
-  }, [isInView1]);
-  useEffect(() => {
-    if (isInView2) {
-      const elem = document.getElementById("projects-numbering");
-      if (elem) {
-        elem.style.transform = "translateY(-100%)";
-      }
-    }
-  }, [isInView2]);
-
-  useEffect(() => {
-    if (isInView3) {
-      const elem = document.getElementById("projects-numbering");
-      if (elem) {
-        elem.style.transform = "translateY(-200%)";
-      }
-    }
-  }, [isInView3]);
-
-  useEffect(() => {
-    if (isInView4) {
-      const elem = document.getElementById("projects-numbering");
-      if (elem) {
-        elem.style.transform = "translateY(-300%)";
-      }
-    }
-  }, [isInView4]);
-
-  //TODO: add some transition to about page
   return (
-    <>
-      <div className="pt-14 pb-[120px]">
-        <h2 className="md:text-8xl text-[16vw] mb-[100px] text-center">
+    <section id="work" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="font-block text-sm uppercase tracking-[0.3em] text-muted">
+          02 — <span className="text-lime">Selected Work</span>
+        </p>
+        <h2 className="mt-3 font-block text-5xl uppercase leading-none text-ink md:text-7xl">
           Projects
         </h2>
-        <div className="grid gap-9 grid-cols-12 items-start ">
-          <div className="hidden md:flex sticky top-9 text-[14vw] col-span-3 ml-[4vw] overflow-hidden font-block">
-            <span className=" transition-all ease-in-out-cubic duration-1000">
-              0
-            </span>
-            <div className="relative">
-              <div
-                id="projects-numbering"
-                className="absolute h-full flex-col  transition-all ease-in-out-cubic duration-1000 "
-              >
-                <span className="inline-block">1.</span>
-                <span className="inline-block">2.</span>
-                <span className="inline-block">3.</span>
-                <span className="inline-block">4.</span>
-              </div>
-            </div>
-          </div>
+      </motion.div>
 
-          <div className="md:col-span-9 col-span-12">
-            {projects
-              .slice(0, -1)
-              .map(({ ref, title, description, img, skills, link, alt }) => (
-                <motion.div ref={ref} key={title} className="md:pb-96 pb-52">
-                  <Project
-                    key={title}
-                    img={img}
-                    title={title}
-                    description={description}
-                    skills={skills}
-                    link={link}
-                    alt={alt}
-                  />
-                </motion.div>
-              ))}
-
-            <motion.div
-              ref={projects[projects.length - 1].ref}
-              key={projects[projects.length - 1].title}
+      <div className="mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-12">
+        {projects.map((project) => (
+          <a
+            key={project.title}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`group block rounded-3xl border border-white/10 bg-white/[0.02] p-5 transition-colors duration-300 hover:border-white/25 ${project.offset}`}
+          >
+            <div
+              className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${project.tint}`}
             >
-              <Project
-                key={projects[projects.length - 1].title}
-                img={projects[projects.length - 1].img}
-                title={projects[projects.length - 1].title}
-                description={projects[projects.length - 1].description}
-                skills={projects[projects.length - 1].skills}
-                link={projects[projects.length - 1].link}
-                alt={projects[projects.length - 1].alt}
+              <img
+                src={project.img}
+                alt={project.alt}
+                className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
-            </motion.div>
-          </div>
-        </div>
+              <span
+                className={`absolute left-4 top-4 rounded-full px-3 py-1 font-block text-sm ${project.chip}`}
+              >
+                {project.tag}
+              </span>
+            </div>
+
+            <div className="mt-5 flex items-start justify-between gap-4">
+              <h3 className="font-block text-3xl uppercase leading-tight text-ink md:text-4xl">
+                {project.title}
+              </h3>
+              <span
+                className={`mt-1 text-2xl text-muted transition-colors duration-300 ${project.arrow}`}
+              >
+                ↗
+              </span>
+            </div>
+
+            <p className="mt-3 text-muted md:text-lg">{project.description}</p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {project.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-white/15 px-3 py-1 text-sm text-muted"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </a>
+        ))}
       </div>
-    </>
+    </section>
   );
 }

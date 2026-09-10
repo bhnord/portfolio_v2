@@ -1,51 +1,59 @@
+import { motion } from "framer-motion";
 import img from "../assets/images/bernhard_nordemann.jpg";
+
+const facts = [
+  "Backend SWE @ Pinterest, Infrastructure Org",
+  "Working on Teletraan and Pindeploy, the systems that move software between environments",
+  "Cooking and baking",
+  "Chasing great food around the world",
+];
+
 export default function About() {
   return (
-    <>
-      <div className="pt-48 px-9 min:h-[100vh]">
-        <h2 className="md:text-8xl md:ml-10 md:text-left text-center md:pb-28 pb-16 text-7xl">
-          About Me
+    <section id="about" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="font-block text-sm uppercase tracking-[0.3em] text-muted">
+          04 — <span className="text-cyan">About</span>
+        </p>
+        <h2 className="mt-3 font-block text-5xl uppercase leading-none text-ink md:text-7xl">
+          About
         </h2>
-        <div className="flex md:hidden items-center justify-center pb-16">
-          <img
-            alt="Photo of Bernhard Nordemann with a city street in the background"
-            src={img}
-            className="w-full max-w-[500px]"
-          />
-        </div>
-        <div className="grid gap-9 grid-cols-6 ">
-          <div className="hidden md:flex items-center justify-left col-span-2 pl-8">
+      </motion.div>
+
+      <div className="mt-16 grid items-start gap-12 md:grid-cols-2">
+        <div className="mx-auto w-full max-w-md">
+          <div className="overflow-hidden rounded-3xl">
             <img
-              alt="Photo of Bernhard Nordemann with a city street in the background"
               src={img}
-              className="w-full max-w-[600px] "
+              alt="Bernhard Nordemann with a city street in the background"
+              className="w-full object-cover"
             />
           </div>
-          <div className="md:col-span-4 col-span-6 md:text-3xl text-2xl">
-            <p>
-              I am working as a Back-End SWE at Pinterest, in the Infrastructure
-              Org.
-              <br />I work on Teletraan, Pinterest's open source deploy system,
-              as well as Pindeploy, an internal system which handles how
-              software moves from one environment to another.
-            </p>
-            <br />
-            <p>
-              I graduated from Worcester Polytechnic Institute with a Masters
-              and Bachelors Computer Science in 2024
-            </p>
-            <br />
-            <p>
-              When I'm not working, I enjoy cooking and baking as well as
-              volunteering at my local community center.
-            </p>
-            <br />
-            <p>
-              I also love travelling and trying new foods all around the world.
-            </p>
-          </div>
+        </div>
+
+        <div>
+          <p className="text-lg text-ink md:text-2xl">
+            I'm Bernhard, a software engineer working on the infrastructure that
+            keeps Pinterest deploying.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {facts.map((fact) => (
+              <li
+                key={fact}
+                className="flex items-start gap-3 text-muted md:text-lg"
+              >
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-lime" />
+                <span>{fact}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </>
+    </section>
   );
 }

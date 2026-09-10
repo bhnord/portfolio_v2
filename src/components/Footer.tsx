@@ -1,42 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 export default function Footer() {
-  //justify between
   return (
-    <>
-      <div className="align-middle pb-14">
-        <div className="text-md md:text-2xl flex md:gap-24 gap-6 justify-center">
-          <span>
-            <div className="relative group w-fit ">
-              <Link to="/contact" className=" transition-all ">
-                Contact Form
-              </Link>
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
-            </div>
-          </span>
-
-          <span>
-            <div className="relative group w-fit ">
-              <a target="_blank" href="https://github.com/bhnord">
-                Github <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
-            </div>
-          </span>
-          <span>
-            <div className="relative group w-fit ">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/bernhard-nordemann/"
-              >
-                LinkedIn <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all group-hover:w-full duration-500"></span>
-            </div>
-          </span>
-        </div>
+    <footer className="border-t border-white/10 px-6 py-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-muted sm:flex-row">
+        <p className="font-block text-lg text-ink">
+          BN<span className="text-lime">.</span>
+        </p>
+        <p className="text-sm">
+          © {new Date().getFullYear()} Bernhard Nordemann —
+          built with React + Tailwind
+        </p>
+        <a
+          href="#top"
+          className="rounded-full border border-white/15 px-4 py-2 font-block text-sm uppercase tracking-wide transition-colors hover:border-pink hover:text-pink"
+        >
+          Back to top
+        </a>
       </div>
-    </>
+    </footer>
   );
 }
